@@ -28,7 +28,7 @@
     "discard_changes_detail": "Masz niezapisane zmiany. Czy jesteś pewien, że chcesz je odrzucić i opuścić ten ekran?"
   },
   "alert": {
-    "default": "Uwaga"
+    "default": "Powiadomienie"
   },
   "azteco": {
     "codeIs": "Twój kod vouchera to",
@@ -115,7 +115,7 @@
     "expired": "Przeterminowana",
     "node_alias": "Alias węzła",
     "expiredLow": "Przeterminowana",
-    "expiresIn": "Wygasa w {time} minut",
+    "expiresIn": "Traci ważność w ciągu {time} minut",
     "payButton": "Zapłać",
     "placeholder": "Faktura",
     "open_channel": "Otwórz kanał",
@@ -136,7 +136,7 @@
     "refill_create": "Aby kontynuować, utwórz portfel Bitcoin który potem doładujesz.",
     "refill_external": "Doładuj z zewnętrznego portfela",
     "refill_lnd_balance": "Doładuj stan portfela Lightning",
-    "sameWalletAsInvoiceError": "Nie możesz zapłacić wezwania z tego samego portfela, który stworzyłeś.",
+    "sameWalletAsInvoiceError": "Nie możesz zapłacić faktury z portfela użytego do jej stworzenia.",
     "title": "Zarządzaj środkami",
     "can_send": "Może wysłać",
     "can_receive": "Może otrzymać",
@@ -150,9 +150,9 @@
     "open_direct_channel": "Otwórz kanał bezpośredni z tym nodem:",
     "please_pay_between_and": "Proszę zapłać między {min} a {max}",
     "please_pay": "Proszę zapłać",
-    "preimage": "Wyświetl kod wezwania",
+    "preimage": "Faktura wstępna (Preimage)",
     "sats": "sat",
-    "wasnt_paid_and_expired": "Ta faktura nie została opłacona i przeterminowała się"
+    "wasnt_paid_and_expired": "Ta faktura nie została opłacona i przeterminowała się."
   },
   "plausibledeniability": {
     "create_fake_storage": "Utwórz szyfrowany schowek",
@@ -173,7 +173,7 @@
     "ok": "OK, zapisałem",
     "ok_lnd": "OK, zapisałem ",
     "text": "Poświęć chwilę by zapisać tę frazę mnemoniczną na kartce papieru\nTo Twoja kopia zapasowa, której możesz użyć później by odtworzyć portfel.",
-    "text_lnd": "Proszę, poświęć chwilę, żeby zapisać to uwierzytelnienie LNDHub. To twoja kopia zapasowa, możesz użyć jej, aby odtworzyć portfel na innym urządzeniu.",
+    "text_lnd": "Zachowaj tę kopię zapasową portfela. Umożliwi Ci odtworzenie portfela w przypadku utraty.",
     "text_lnd2": "Ten portfel jest obsługiwany przez BlueWallet.",
     "title": "Twój portfel został utworzony"
   },
@@ -182,7 +182,11 @@
     "details_label": "Opis",
     "details_setAmount": "Otrzymaj kwotę",
     "details_share": "Udostępnij",
-    "header": "Otrzymaj"
+    "header": "Otrzymaj",
+    "maxSats": "Kwota maksymalna to {max} satoshi",
+    "maxSatsFull": "Maksymalna kwota to {max} satoshi lub {currency}",
+    "minSats": "Kwota minimalna to {min} satoshi",
+    "minSatsFull": "Kwota minimalna to {min} satoshi lub {currency}"
   },
   "send": {
     "provided_address_is_invoice": "Ten adres wygląda na fakturę Lightning. Przejdź do swojego portfela Lightning aby ją opłacić.",
@@ -199,7 +203,7 @@
     "create_details": "Szczegóły",
     "create_fee": "Opłata",
     "create_memo": "Notatka",
-    "create_satoshi_per_vbyte": "Satoshi za vbajt",
+    "create_satoshi_per_vbyte": "Satoshi za vByte",
     "create_this_is_hex": "To jest hex twojej transakcji, podpisany i gotowy żeby rozgłosić go w sieci",
     "create_to": "Do",
     "create_tx_size": "Rozmiar TX",
@@ -219,14 +223,14 @@
     "details_create": "Stwórz fakturę",
     "details_error_decode": "Nie można zdekodować adresu Bitcoin",
     "details_fee_field_is_not_valid": "Błędnie wypełnione pole z opłatą",
-    "details_frozen": "{amount} BTC jest zamrożone",
+    "details_frozen": "{amount} BTC jest zamrożona",
     "details_next": "Następny",
     "details_no_signed_tx": "Wskazany plik nie zawiera transakcji, która może zostać zaimportowana.",
     "details_note_placeholder": "Własny opis transakcji",
     "details_scan": "Skanuj",
     "details_scan_hint": "Kliknij dwukrotnie, aby zeskanować lub zaimportować miejsce docelowe",
     "details_total_exceeds_balance": "Wysłanie tej ilości przekracza dostępne saldo.",
-    "details_total_exceeds_balance_frozen": "Kwota do wydania jest większa niż dostępne saldo. Pamiętaj, że zamrożone monety są wyłączone z użytku.",
+    "details_total_exceeds_balance_frozen": "Wysyłana kwota przekracza dostępne saldo. Zwróć uwagę, że zamrożone monety są wyłączone.",
     "details_unrecognized_file_format": "Format nierozpoznany",
     "details_wallet_before_tx": "Przed stworzeniem transakcji, najpierw utwórz portfel Bitcoin.",
     "dynamic_init": "Inicjalizuję",
@@ -240,7 +244,7 @@
     "fee_custom": "Niestandardowe",
     "fee_fast": "Szybkie",
     "fee_medium": "Średnie",
-    "fee_replace_minvb": "Całkowita opłata (satoshu za vbajt) jaką chcesz zapłacić powinna być wyższa niż {min} sat/vbajt.",
+    "fee_replace_minvb": "Opłata całkowita (satoshi za vByte), którą chcesz ponieść powinna być wyższa niż {min} satoshi/vByte.",
     "fee_satvbyte": "w sat/vBajt",
     "fee_slow": "Wolne",
     "header": "Wyślij",
@@ -295,8 +299,8 @@
     "currency": "Waluta",
     "currency_source": "Kurs jest pozyskiwany z",
     "currency_fetch_error": "Wystąpił błąd podczas pobierania kursu dla wybranej waluty.",
-    "default_desc": "Po uruchomieniu BlueWallet natychmiast otworzy wcześniej wybrany domyślny portfel.",
-    "default_info": "Informacje domyślne",
+    "default_desc": "Gdy jest wyłączone, BlueWallet natychmiast otworzy wybrany domyślny portfel.",
+    "default_info": "Domyślny portfel",
     "default_title": "Po uruchomieniu",
     "default_wallets": "Wyświetl wszystkie portfele",
     "electrum_connected": "Połączony",
@@ -340,7 +344,7 @@
     "general_adv_mode_e": "Gdy włączone, zobaczysz zaawansowane ustawienia takie jak np. różne typy portfeli, zdolność do określenia instancji LNDHub, z którą chcesz się połączyć oraz niestandardowej entropii w trakcie tworzenia portfela.",
     "general_continuity": "Funkcja Continuity",
     "general_continuity_e": "Gdy włączone, będziesz miał podgląd do wybranych portfeli i transakcji przy użyciu swoich urządzeń zalogowanych do Apple iCloud. ",
-    "groundcontrol_explanation": "GroundControl jest darmową opcją serwera powiadamień push dla portfeli bitcoin. Możesz zainstalować swój własny serwer GroundControl i podać jego URL tutaj, tak aby nie polegać na infrastrukturze BlueWallet. Zostaw puste by użyć domyślnej wartości.",
+    "groundcontrol_explanation": "GroundControl jest darmowym, open source'owym serwerem powiadomień push dla portfeli bitcoin. Możesz zainstalować swój własny serwer GroundControl i podać jego URL tutaj aby nie polegać na infrastrukturze BlueWallet. Zostaw puste by użyć domyślnej wartości.",
     "header": "Ustawienia",
     "language": "Język",
     "last_updated": "Ostatnia aktualizacja",
@@ -370,14 +374,14 @@
     "privacy_do_not_track": "Wyłącz analitykę",
     "privacy_do_not_track_explanation": "Informacje dotyczące wydajności i niezawodności nie będą przesyłane do analizy.",
     "push_notifications": "Powiadomienia Push",
-    "rate": "Stawka",
+    "rate": "Kurs",
     "retype_password": "Wprowadź Ponownie hasło",
     "selfTest": "Autotest",
     "save": "Zapisz",
     "saved": "Zapisano",
     "success_transaction_broadcasted" : "Sukces! Twoja transakcja została rozgłoszona!",
     "total_balance": "Saldo całkowite",
-    "total_balance_explanation": "Wyświetlaj całkowite saldo wszystkich Twoich portfeli wśród widżetów na ekranie domowym",
+    "total_balance_explanation": "Wyświetlaj saldo całkowite wszystkich Twoich portfeli wśród widżetów na ekranie domowym",
     "widgets": "Widżety",
     "tools": "Narzędzia"
   },
@@ -387,7 +391,7 @@
     "ask_me_later": "Zapytaj później"
   },
   "transactions": {
-    "cancel_explain": "Zastąpimy tą transakcję taką, która ma wyższe opłaty. To efektywnie anuluje transakcję. Nazywa się to RBF - Replace By Fee, Zastąp Opłatą.",
+    "cancel_explain": "Zastąpimy tę transakcję taką, która płaci Tobie i ma wyższe opłaty. To efektywnie anuluje bieżącą transakcję. To się nazywa RBF—Replace by Fee.",
     "cancel_no": "Ta transakcja jest nie do zastąpienia",
     "cancel_title": "Anuluj tę transakcję (RBF)",
     "confirmations_lowercase": "Potwierdzenia: {confirmations}",
@@ -423,8 +427,8 @@
     "eta_3h": "Szacowany czas: ~3 godziny",
     "eta_1d": "Szacowany czas: ~1 dzień",
     "list_title": "Transakcje",
-    "open_url_error": "Nie udało się otworzyć adresu przy użyciu domyślnej przeglądarki. Zmień swoją domyślną przeglądarkę i spróboj ponownie",
-    "rbf_explain": "Zastąpimy tą transakcję taką, która ma wyższe opłaty, tak że powinna zostać szybciej wykopana. Nazywa się to RBF - Replace By Fee, Zastąp Opłatą.",
+    "open_url_error": "Nie udało się otworzyć linku za pomocą domyślnej przeglądarki. Zmień swoją domyślną przeglądarkę i spróbój ponownie.",
+    "rbf_explain": "Zastąpimy tę transakcję taką, która ma wyższą opłatę, aby została wykopana szybciej. To się nazywa RBF—Replace by Fee.",
     "rbf_title": "podbij opłatę (RBF)",
     "status_bump": "Podbij Opłatę",
     "status_cancel": "Anuluj transakcje",
@@ -525,6 +529,7 @@
     "no_ln_wallet_error": "Musisz najpierw dodać portfel Lightning, zanim zapłacisz fakturę.",
     "looks_like_bip38": "To wygląda na klucz prywatny chroniony hasłem (BIP38).",
     "reorder_title": "Zmień kolejność portfeli",
+    "reorder_instructions": "Stuknij i przytrzmaj portfel aby go przeciągnąć na liście.",
     "please_continue_scanning": "Proszę skanuj dalej.",
     "scan_error": "Błąd skanowania",
     "select_no_bitcoin": "Nie ma dostępnych portfeli Bitcoin.",
@@ -625,6 +630,7 @@
   "cc": {
     "change": "Reszta",
     "coins_selected": "Wybrano monet ({number})",
+    "selected_summ": "{value} wybrano",
     "empty": "Ten portfel nie ma żadnych monet w tej chwili.",
     "freeze": "Zamrożona",
     "freezeLabel": "Zamroź",
@@ -641,13 +647,13 @@
     "sats": "satoshi"
   },
   "addresses": {
-    "sign_title": "Podpisz/Zweryfikuj wiadomość",
-    "sign_help": "Tutaj możesz utworzyć lub zweryfikować kryptograficzny podpis w oparciu o adres Bitcoin",
+    "sign_title": "Podpisz/Weryfikuj wiadomość",
+    "sign_help": "Tutaj możesz stworzyć lub zweryfikować podpis kryptograficzny oparty o adres Bitcoin.",
     "sign_sign": "Podpisz",
     "sign_sign_submit": "Podpisz i Wyślij",
     "sign_verify": "Weryfikuj",
     "sign_signature_correct": "Weryfikacja pomyślna!",
-    "sign_signature_incorrect": "Weryfikacja nie powiodła się!",
+    "sign_signature_incorrect": "Błąd weryfikacji!",
     "sign_placeholder_address": "Adres",
     "sign_placeholder_message": "Wiadomość",
     "sign_placeholder_signature": "Podpis",
@@ -656,5 +662,21 @@
     "type_receive": "Otrzymaj",
     "type_used": "Używany",
     "transactions": "Transakcje"
+  },
+  "lnurl_auth": {
+    "register_question_part_1": "Czy chcesz zarejestrować konto w ",
+    "register_question_part_2": "używając swojego portfela Lightning?",
+    "register_answer": "Konto w {hostname} zarejestrowane pomyślnie!",
+    "login_question_part_1": "Czy chcesz zalogować się w",
+    "login_question_part_2": "używając swojego portfela Lightning?",
+    "login_answer": "Zalogowano pomyślnie w {hostname}!",
+    "link_question_part_1": "Czy chcesz połączyć swoje konto w",
+    "link_question_part_2": "ze swoim portfelem Lightning?",
+    "link_answer": "Portfel Lightning połączony z {hostname} pomyślnie!",
+    "auth_question_part_1": "Czy chcesz się uwierzytelnić w",
+    "auth_question_part_2": "używając swojego portfela Lightning?",
+    "auth_answer": "Uwierzytelniono z {hostname} pomyślnie!",
+    "could_not_auth": "Uwierzytelnienie z {hostname} nie powiodło się.",
+    "authenticate": "Uwierzytelnianie"
   }
 }
